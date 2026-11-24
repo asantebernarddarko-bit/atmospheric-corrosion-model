@@ -1,0 +1,10 @@
+Location,Scenario,ISO_Corrosivity_Category,Number_of_Years
+Kumasi,High,C5 - Very High,10
+Kumasi,Low,C2 - Low,10
+Kumasi,Moderate,C3 - Medium,10
+Kumasi,Very High,CX - Extreme,10
+Tema,High,C5 - Very High,10
+Tema,Low,C2 - Low,10
+Tema,Moderate,C3 - Medium,3
+Tema,Moderate,C4 - High,7
+Tema,Very High,CX - Extreme,10

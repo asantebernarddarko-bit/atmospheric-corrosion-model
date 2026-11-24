@@ -1,0 +1,81 @@
+Location,Year,Scenario,Temperature_C,Relative_Humidity_Percent,SO2_Deposition_mg_m2_day,Chloride_Deposition_mg_m2_day,Deposition_Status
+Kumasi,2015,Low,26.5475194630137,75.99677039691781,2,1.5,Illustrative scenario assumption
+Kumasi,2015,Moderate,26.5475194630137,75.99677039691781,14,31.5,Illustrative scenario assumption
+Kumasi,2015,High,26.5475194630137,75.99677039691781,52,180.0,Illustrative scenario assumption
+Kumasi,2015,Very High,26.5475194630137,75.99677039691781,140,500.0,Illustrative scenario assumption
+Kumasi,2016,Low,26.932951978142075,76.84460061366121,2,1.5,Illustrative scenario assumption
+Kumasi,2016,Moderate,26.932951978142075,76.84460061366121,14,31.5,Illustrative scenario assumption
+Kumasi,2016,High,26.932951978142075,76.84460061366121,52,180.0,Illustrative scenario assumption
+Kumasi,2016,Very High,26.932951978142075,76.84460061366121,140,500.0,Illustrative scenario assumption
+Kumasi,2017,Low,26.56556545719178,79.64142919383562,2,1.5,Illustrative scenario assumption
+Kumasi,2017,Moderate,26.56556545719178,79.64142919383562,14,31.5,Illustrative scenario assumption
+Kumasi,2017,High,26.56556545719178,79.64142919383562,52,180.0,Illustrative scenario assumption
+Kumasi,2017,Very High,26.56556545719178,79.64142919383562,140,500.0,Illustrative scenario assumption
+Kumasi,2018,Low,26.495348520890413,79.26769537979452,2,1.5,Illustrative scenario assumption
+Kumasi,2018,Moderate,26.495348520890413,79.26769537979452,14,31.5,Illustrative scenario assumption
+Kumasi,2018,High,26.495348520890413,79.26769537979452,52,180.0,Illustrative scenario assumption
+Kumasi,2018,Very High,26.495348520890413,79.26769537979452,140,500.0,Illustrative scenario assumption
+Kumasi,2019,Low,26.798349373972606,79.7121506708904,2,1.5,Illustrative scenario assumption
+Kumasi,2019,Moderate,26.798349373972606,79.7121506708904,14,31.5,Illustrative scenario assumption
+Kumasi,2019,High,26.798349373972606,79.7121506708904,52,180.0,Illustrative scenario assumption
+Kumasi,2019,Very High,26.798349373972606,79.7121506708904,140,500.0,Illustrative scenario assumption
+Kumasi,2020,Low,26.83264024692623,77.24736366034836,2,1.5,Illustrative scenario assumption
+Kumasi,2020,Moderate,26.83264024692623,77.24736366034836,14,31.5,Illustrative scenario assumption
+Kumasi,2020,High,26.83264024692623,77.24736366034836,52,180.0,Illustrative scenario assumption
+Kumasi,2020,Very High,26.83264024692623,77.24736366034836,140,500.0,Illustrative scenario assumption
+Kumasi,2021,Low,26.785582321917804,78.99718388561644,2,1.5,Illustrative scenario assumption
+Kumasi,2021,Moderate,26.785582321917804,78.99718388561644,14,31.5,Illustrative scenario assumption
+Kumasi,2021,High,26.785582321917804,78.99718388561644,52,180.0,Illustrative scenario assumption
+Kumasi,2021,Very High,26.785582321917804,78.99718388561644,140,500.0,Illustrative scenario assumption
+Kumasi,2022,Low,26.37872500308219,77.67831644965753,2,1.5,Illustrative scenario assumption
+Kumasi,2022,Moderate,26.37872500308219,77.67831644965753,14,31.5,Illustrative scenario assumption
+Kumasi,2022,High,26.37872500308219,77.67831644965753,52,180.0,Illustrative scenario assumption
+Kumasi,2022,Very High,26.37872500308219,77.67831644965753,140,500.0,Illustrative scenario assumption
+Kumasi,2023,Low,26.713920170205483,79.42446969931507,2,1.5,Illustrative scenario assumption
+Kumasi,2023,Moderate,26.713920170205483,79.42446969931507,14,31.5,Illustrative scenario assumption
+Kumasi,2023,High,26.713920170205483,79.42446969931507,52,180.0,Illustrative scenario assumption
+Kumasi,2023,Very High,26.713920170205483,79.42446969931507,140,500.0,Illustrative scenario assumption
+Kumasi,2024,Low,27.36172205191257,76.79117327185791,2,1.5,Illustrative scenario assumption
+Kumasi,2024,Moderate,27.36172205191257,76.79117327185791,14,31.5,Illustrative scenario assumption
+Kumasi,2024,High,27.36172205191257,76.79117327185791,52,180.0,Illustrative scenario assumption
+Kumasi,2024,Very High,27.36172205191257,76.79117327185791,140,500.0,Illustrative scenario assumption
+Tema,2015,Low,27.332811497945205,80.13212887842467,2,1.5,Illustrative scenario assumption
+Tema,2015,Moderate,27.332811497945205,80.13212887842467,14,31.5,Illustrative scenario assumption
+Tema,2015,High,27.332811497945205,80.13212887842467,52,180.0,Illustrative scenario assumption
+Tema,2015,Very High,27.332811497945205,80.13212887842467,140,500.0,Illustrative scenario assumption
+Tema,2016,Low,27.772162028688523,80.09573776058744,2,1.5,Illustrative scenario assumption
+Tema,2016,Moderate,27.772162028688523,80.09573776058744,14,31.5,Illustrative scenario assumption
+Tema,2016,High,27.772162028688523,80.09573776058744,52,180.0,Illustrative scenario assumption
+Tema,2016,Very High,27.772162028688523,80.09573776058744,140,500.0,Illustrative scenario assumption
+Tema,2017,Low,27.470418851712328,81.98158598458905,2,1.5,Illustrative scenario assumption
+Tema,2017,Moderate,27.470418851712328,81.98158598458905,14,31.5,Illustrative scenario assumption
+Tema,2017,High,27.470418851712328,81.98158598458905,52,180.0,Illustrative scenario assumption
+Tema,2017,Very High,27.470418851712328,81.98158598458905,140,500.0,Illustrative scenario assumption
+Tema,2018,Low,27.582683305479446,80.73458154349314,2,1.5,Illustrative scenario assumption
+Tema,2018,Moderate,27.582683305479446,80.73458154349314,14,31.5,Illustrative scenario assumption
+Tema,2018,High,27.582683305479446,80.73458154349314,52,180.0,Illustrative scenario assumption
+Tema,2018,Very High,27.582683305479446,80.73458154349314,140,500.0,Illustrative scenario assumption
+Tema,2019,Low,27.8622894869863,81.02327143047945,2,1.5,Illustrative scenario assumption
+Tema,2019,Moderate,27.8622894869863,81.02327143047945,14,31.5,Illustrative scenario assumption
+Tema,2019,High,27.8622894869863,81.02327143047945,52,180.0,Illustrative scenario assumption
+Tema,2019,Very High,27.8622894869863,81.02327143047945,140,500.0,Illustrative scenario assumption
+Tema,2020,Low,27.87452169740437,79.16083685177595,2,1.5,Illustrative scenario assumption
+Tema,2020,Moderate,27.87452169740437,79.16083685177595,14,31.5,Illustrative scenario assumption
+Tema,2020,High,27.87452169740437,79.16083685177595,52,180.0,Illustrative scenario assumption
+Tema,2020,Very High,27.87452169740437,79.16083685177595,140,500.0,Illustrative scenario assumption
+Tema,2021,Low,27.88936885445206,79.9251206979452,2,1.5,Illustrative scenario assumption
+Tema,2021,Moderate,27.88936885445206,79.9251206979452,14,31.5,Illustrative scenario assumption
+Tema,2021,High,27.88936885445206,79.9251206979452,52,180.0,Illustrative scenario assumption
+Tema,2021,Very High,27.88936885445206,79.9251206979452,140,500.0,Illustrative scenario assumption
+Tema,2022,Low,27.304007953082195,80.49179979417808,2,1.5,Illustrative scenario assumption
+Tema,2022,Moderate,27.304007953082195,80.49179979417808,14,31.5,Illustrative scenario assumption
+Tema,2022,High,27.304007953082195,80.49179979417808,52,180.0,Illustrative scenario assumption
+Tema,2022,Very High,27.304007953082195,80.49179979417808,140,500.0,Illustrative scenario assumption
+Tema,2023,Low,27.92014542465754,79.91494087123289,2,1.5,Illustrative scenario assumption
+Tema,2023,Moderate,27.92014542465754,79.91494087123289,14,31.5,Illustrative scenario assumption
+Tema,2023,High,27.92014542465754,79.91494087123289,52,180.0,Illustrative scenario assumption
+Tema,2023,Very High,27.92014542465754,79.91494087123289,140,500.0,Illustrative scenario assumption
+Tema,2024,Low,28.24024742520492,79.06684446106557,2,1.5,Illustrative scenario assumption
+Tema,2024,Moderate,28.24024742520492,79.06684446106557,14,31.5,Illustrative scenario assumption
+Tema,2024,High,28.24024742520492,79.06684446106557,52,180.0,Illustrative scenario assumption
+Tema,2024,Very High,28.24024742520492,79.06684446106557,140,500.0,Illustrative scenario assumption

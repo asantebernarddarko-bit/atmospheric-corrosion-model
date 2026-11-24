@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Thickness Assessment | Corrosion Research Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>AC</h2>
+            <p>Corrosion Research Portal</p>
+        </div>
+
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/environment">Environmental Data</a>
+            <a href="/corrosion">Corrosion Prediction</a>
+            <a href="/thickness" class="active">Steel Thickness</a>
+            <a href="/service-life">Service-Life Analysis</a>
+            <a href="/economics">Economic Analysis</a>
+            <a href="/reports">Reports & Results</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            Academic Research Prototype
+        </div>
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Steel Thickness Assessment</h2>
+                <p>Carbon Steel Degradation Analysis</p>
+            </div>
+            <span class="status-badge">Research Module</span>
+        </header>
+
+
+        <section class="hero">
+            <div>
+                <h1>Steel Thickness Assessment</h1>
+                <p>
+                    Evaluation of corrosion-induced thickness reduction
+                    in carbon steel structures under different atmospheric
+                    environments.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="section-heading">
+            <h2>Assessment Overview</h2>
+            <p>Summary of available steel thickness datasets.</p>
+        </section>
+
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <h3>Detailed Records</h3>
+                <h2>{{ thickness_rows }}</h2>
+                <p>Thickness assessment dataset</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Summary Records</h3>
+                <h2>{{ summary_rows }}</h2>
+                <p>50-year assessment dataset</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Study Locations</h3>
+                <h2>2</h2>
+                <p>Tema and Kumasi</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Analysis Period</h3>
+                <h2>50 Years</h2>
+                <p>Long-term thickness assessment</p>
+            </div>
+
+        </section>
+
+
+        <section class="content-card">
+            <h2>Steel Thickness Assessment Results</h2>
+            <p>
+                Detailed assessment of initial thickness, corrosion loss
+                and remaining steel thickness.
+            </p>
+
+            <div class="table-container">
+                {{ thickness_table | safe }}
+            </div>
+        </section>
+
+
+        <section class="content-card">
+            <h2>50-Year Thickness Summary</h2>
+            <p>
+                Summary of predicted steel thickness reduction over
+                the 50-year analysis period.
+            </p>
+
+            <div class="table-container">
+                {{ summary_table | safe }}
+            </div>
+        </section>
+
+
+        <section class="content-card">
+            <h2>Engineering Interpretation</h2>
+
+            <p>
+                The assessment examines the effect of atmospheric corrosion
+                on carbon steel thickness over time. Corrosion loss is used
+                to estimate the remaining steel thickness under different
+                environmental scenarios.
+            </p>
+
+            <p>
+                The results are model-based estimates and should be
+                interpreted alongside the assumptions and limitations
+                of the corrosion prediction model.
+            </p>
+        </section>
+
+
+        <footer class="footer">
+            Atmospheric Corrosion Prediction and Life-Cycle Cost Research
+            <br>
+            Academic Research Prototype
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

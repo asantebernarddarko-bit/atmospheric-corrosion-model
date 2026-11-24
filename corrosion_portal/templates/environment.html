@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Data | Corrosion Research Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .page-banner {
+            background: linear-gradient(110deg, #102b46, #1b5270);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 28px;
+        }
+
+        .page-banner h1 { font-size: 25px; margin: 10px 0; }
+        .page-banner p { color: #d2e0eb; font-size: 12px; line-height: 1.8; }
+
+        .data-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .data-card {
+            background: white;
+            padding: 22px;
+            border-radius: 10px;
+            border: 1px solid #e8edf2;
+        }
+
+        .data-card span { color: #8290a2; font-size: 11px; }
+        .data-card h2 { color: #102b46; font-size: 27px; margin-top: 10px; }
+
+        .table-container {
+            background: white;
+            padding: 24px;
+            margin-top: 28px;
+            border-radius: 11px;
+            border: 1px solid #e8edf2;
+            overflow-x: auto;
+        }
+
+        .table-container h2 { font-size: 17px; margin-bottom: 8px; }
+        .table-container p { font-size: 11px; color: #8290a2; margin-bottom: 20px; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        th {
+            background: #102b46;
+            color: white;
+            padding: 13px;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #edf0f4;
+        }
+
+        tr:hover { background: #f3f8f5; }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 22px;
+            color: #16865d;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        @media(max-width: 750px) {
+            .data-cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-emblem">AC</div>
+            <div>
+                <h2>ACR SYSTEM</h2>
+                <span>RESEARCH PORTAL</span>
+            </div>
+        </div>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="navigation">
+            <a href="/" class="nav-link"><span>▦</span> Dashboard</a>
+            <a href="/environment" class="nav-link active"><span>◉</span> Environmental Data</a>
+            <a href="/corrosion" class="nav-link"><span>⌁</span> Corrosion Prediction</a>
+            <a href="/thickness" class="nav-link"><span>▤</span> Steel Thickness</a>
+            <a href="/service-life" class="nav-link"><span>◷</span> Service-Life Analysis</a>
+            <a href="/economics" class="nav-link"><span>▥</span> Economic Analysis</a>
+            <a href="/reports" class="nav-link"><span>▧</span> Reports & Results</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="system-status">
+                <span class="status-dot"></span>
+                Research System
+            </div>
+            <p>Atmospheric Corrosion<br>Prediction Project</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <span class="breadcrumb">Research / Environmental Data</span>
+                <h3>Environmental Assessment</h3>
+            </div>
+            <div class="topbar-right">
+                <div class="date-box">DATA ANALYSIS</div>
+                <div class="profile-circle">ME</div>
+            </div>
+        </header>
+
+        <section class="page-banner">
+            <span class="welcome-tag">MODULE 01 / ENVIRONMENTAL INPUTS</span>
+            <h1>Environmental Data Analysis</h1>
+            <p>
+                Examination of atmospheric temperature and relative humidity
+                for the selected study locations, Tema and Kumasi.
+                These environmental variables support the corrosion prediction model.
+            </p>
+        </section>
+
+        <section class="data-cards">
+            <div class="data-card">
+                <span>Number of Data Records</span>
+                <h2>{{ row_count }}</h2>
+            </div>
+
+            <div class="data-card">
+                <span>Study Locations</span>
+                <h2>{{ location_count }}</h2>
+            </div>
+
+            <div class="data-card">
+                <span>Study Period</span>
+                <h2>2015–2024</h2>
+            </div>
+        </section>
+
+        <section class="table-container">
+            <h2>Annual Environmental Summary</h2>
+            <p>Processed environmental data used in the atmospheric corrosion study.</p>
+
+            {% if records_html %}
+                {{ records_html|safe }}
+            {% else %}
+                <p>No environmental summary data could be loaded.</p>
+            {% endif %}
+        </section>
+
+        <a href="/" class="back-link">← Return to Main Dashboard</a>
+
+        <footer class="footer">
+            <div>
+                <strong>ATMOSPHERIC CORROSION RESEARCH SYSTEM</strong>
+                <p>Environmental Data Module</p>
+            </div>
+            <span>ACADEMIC RESEARCH PROTOTYPE</span>
+        </footer>
+
+    </main>
+</div>
+</body>
+</html>

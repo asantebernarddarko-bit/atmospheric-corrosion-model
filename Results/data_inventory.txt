@@ -1,0 +1,24 @@
+
+FILE: combined_humidity.csv
+Records: 58448
+Columns: Date, Location, Temperature_C, Dewpoint_C, Relative_Humidity_Percent
+
+FILE: corrosion_model_input.csv
+Records: 58448
+Columns: Date, Location, Temperature_C, Dewpoint_C, Relative_Humidity_Percent
+
+FILE: environmental_data_prepared.csv
+Records: 58448
+Columns: Date, Location, Temperature_C, Dewpoint_C, Relative_Humidity_Percent
+
+FILE: humidity_summary.csv
+Records: 4
+Columns: Unnamed: 0, Temperature_C, Temperature_C.1, Temperature_C.2, Dewpoint_C, Dewpoint_C.1, Dewpoint_C.2, Relative_Humidity_Percent, Relative_Humidity_Percent.1, Relative_Humidity_Percent.2
+
+FILE: Kumasi_humidity.csv
+Records: 29224
+Columns: Date, Location, Temperature_C, Dewpoint_C, Relative_Humidity_Percent
+
+FILE: Tema_humidity.csv
+Records: 29224
+Columns: Date, Location, Temperature_C, Dewpoint_C, Relative_Humidity_Percent

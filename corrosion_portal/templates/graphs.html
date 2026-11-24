@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphs & Visualisation | Corrosion Research Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>⚙ CORROSION MODEL</h2>
+        <p>Research Portal</p>
+
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/environment">Environmental Data</a>
+            <a href="/corrosion">Corrosion Prediction</a>
+            <a href="/thickness">Steel Thickness</a>
+            <a href="/service-life">Service-Life Analysis</a>
+            <a href="/economics">Economic Analysis</a>
+            <a href="/graphs" class="active">Graphs & Visualisation</a>
+            <a href="/reports">Reports & Results</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="page-header">
+            <h1>Graphs & Visualisation</h1>
+            <p>
+                Graphical presentation of atmospheric corrosion predictions,
+                steel thickness assessment and life-cycle cost results.
+            </p>
+        </header>
+
+        <section class="content-card">
+            <h2>1. Life-Cycle Cost under Different Environmental Scenarios</h2>
+            <p>
+                This graph compares the estimated discounted life-cycle costs
+                under different environmental exposure scenarios for Tema and Kumasi.
+            </p>
+            <img class="result-graph"
+                 src="{{ url_for('static', filename='images/graph1_lcc_environmental_scenarios.png') }}"
+                 alt="Life-cycle cost under different environmental scenarios">
+        </section>
+
+        <section class="content-card">
+            <h2>2. Tema versus Kumasi Cost Comparison</h2>
+            <p>
+                This graph compares the estimated life-cycle costs of carbon
+                steel structures in the two study locations.
+            </p>
+            <img class="result-graph"
+                 src="{{ url_for('static', filename='images/graph2_tema_kumasi_comparison.png') }}"
+                 alt="Tema versus Kumasi cost comparison">
+        </section>
+
+        <section class="content-card">
+            <h2>3. Effect of Steel Thickness on Life-Cycle Cost</h2>
+            <p>
+                This graph illustrates how the initial steel thickness affects
+                the estimated life-cycle cost under the selected high-exposure scenario.
+            </p>
+            <img class="result-graph"
+                 src="{{ url_for('static', filename='images/graph3_steel_thickness_effect.png') }}"
+                 alt="Effect of steel thickness on life-cycle cost">
+        </section>
+
+        <section class="content-card">
+            <h2>4. Effect of Replacement Threshold on Life-Cycle Cost</h2>
+            <p>
+                This graph examines how different steel replacement thresholds
+                influence the estimated discounted life-cycle cost.
+            </p>
+            <img class="result-graph"
+                 src="{{ url_for('static', filename='images/graph4_replacement_threshold_effect.png') }}"
+                 alt="Effect of replacement threshold on life-cycle cost">
+        </section>
+
+        <section class="content-card">
+            <h2>Interpretation of Results</h2>
+            <p>
+                The graphs provide a visual comparison of the influence of
+                environmental exposure, location, steel thickness and replacement
+                threshold on the estimated life-cycle cost of carbon steel structures.
+            </p>
+            <p>
+                The results are model-based estimates. Pollution deposition values
+                and economic inputs include illustrative assumptions and should
+                not be interpreted as direct field measurements or verified market prices.
+            </p>
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

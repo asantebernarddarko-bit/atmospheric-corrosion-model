@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service-Life Analysis | Corrosion Research Portal</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <h2>AC</h2>
+            <p>Corrosion Research Portal</p>
+        </div>
+
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/environment">Environmental Data</a>
+            <a href="/corrosion">Corrosion Prediction</a>
+            <a href="/thickness">Steel Thickness</a>
+            <a href="/service-life" class="active">Service-Life Analysis</a>
+            <a href="/economics">Economic Analysis</a>
+            <a href="/reports">Reports & Results</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            Academic Research Prototype
+        </div>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Service-Life Analysis</h2>
+                <p>Long-Term Performance Assessment</p>
+            </div>
+
+            <span class="status-badge">Research Module</span>
+        </header>
+
+
+        <section class="hero">
+
+            <div>
+                <h1>Carbon Steel Service-Life Prediction</h1>
+
+                <p>
+                    Evaluation of the long-term durability of carbon steel
+                    structures under different atmospheric corrosivity
+                    conditions.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="section-heading">
+            <h2>Service-Life Overview</h2>
+            <p>Summary of the available service-life prediction results.</p>
+        </section>
+
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <h3>Prediction Records</h3>
+                <h2>{{ record_count }}</h2>
+                <p>Service-life dataset</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Study Locations</h3>
+                <h2>{{ location_count }}</h2>
+                <p>Tema and Kumasi</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Analysis Period</h3>
+                <h2>50 Years</h2>
+                <p>Long-term assessment</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Steel Thicknesses</h3>
+                <h2>5–15 mm</h2>
+                <p>Assessment range</p>
+            </div>
+
+        </section>
+
+
+        <section class="content-card">
+
+            <h2>Service-Life Prediction Results</h2>
+
+            <p>
+                The table presents the predicted remaining thickness
+                and corrosion loss of carbon steel at different exposure
+                periods.
+            </p>
+
+            <div class="table-container">
+                {{ records_html | safe }}
+            </div>
+
+        </section>
+
+
+        <section class="content-card">
+
+            <h2>Engineering Interpretation</h2>
+
+            <p>
+                Service-life estimation is based on predicted atmospheric
+                corrosion rates and the reduction in steel thickness
+                over time.
+            </p>
+
+            <p>
+                The assessment considers different initial steel thicknesses
+                and environmental scenarios for Tema and Kumasi.
+            </p>
+
+            <p>
+                The predicted remaining thickness does not independently
+                establish structural failure. An engineering minimum
+                allowable thickness must be specified for that assessment.
+            </p>
+
+        </section>
+
+
+        <footer class="footer">
+
+            Atmospheric Corrosion Prediction and Life-Cycle Cost Research
+
+            <br>
+
+            Academic Research Prototype
+
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

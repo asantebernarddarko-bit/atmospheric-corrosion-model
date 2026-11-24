@@ -1,0 +1,9 @@
+Location,Scenario,Average_Corrosion_Rate,Minimum_Corrosion_Rate,Maximum_Corrosion_Rate
+Kumasi,High,124.88,116.46,130.93
+Kumasi,Low,9.95,9.41,10.36
+Kumasi,Moderate,46.82,43.81,49.0
+Kumasi,Very High,229.67,213.98,240.9
+Tema,High,135.75,131.7,142.27
+Tema,Low,10.47,10.12,10.98
+Tema,Moderate,50.46,48.95,52.88
+Tema,Very High,250.21,242.74,262.21

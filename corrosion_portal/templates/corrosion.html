@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrosion Prediction | ACR Research Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        .page-banner {
+            background: linear-gradient(110deg, #102b46, #1b5270);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 28px;
+        }
+
+        .page-banner h1 { font-size: 25px; margin: 10px 0; }
+        .page-banner p { color: #d2e0eb; font-size: 12px; line-height: 1.8; }
+
+        .data-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .data-card {
+            background: white;
+            padding: 22px;
+            border-radius: 10px;
+            border: 1px solid #e8edf2;
+        }
+
+        .data-card span { color: #8290a2; font-size: 11px; }
+        .data-card h2 { color: #102b46; font-size: 27px; margin-top: 10px; }
+
+        .table-container {
+            background: white;
+            padding: 24px;
+            margin-top: 28px;
+            border-radius: 11px;
+            border: 1px solid #e8edf2;
+            overflow-x: auto;
+        }
+
+        .table-container h2 { font-size: 17px; margin-bottom: 8px; }
+        .table-container p { font-size: 11px; color: #8290a2; margin-bottom: 20px; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        th {
+            background: #102b46;
+            color: white;
+            padding: 13px;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #edf0f4;
+        }
+
+        tr:hover { background: #f3f8f5; }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 22px;
+            color: #16865d;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .note {
+            background: #fff8e8;
+            border-left: 4px solid #d6a83e;
+            padding: 16px;
+            margin-top: 22px;
+            border-radius: 5px;
+            color: #725a26;
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        @media(max-width: 750px) {
+            .data-cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-emblem">AC</div>
+            <div>
+                <h2>ACR SYSTEM</h2>
+                <span>RESEARCH PORTAL</span>
+            </div>
+        </div>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="navigation">
+            <a href="/" class="nav-link"><span>▦</span> Dashboard</a>
+            <a href="/environment" class="nav-link"><span>◉</span> Environmental Data</a>
+            <a href="/corrosion" class="nav-link active"><span>⌁</span> Corrosion Prediction</a>
+            <a href="/thickness" class="nav-link"><span>▤</span> Steel Thickness</a>
+            <a href="/service-life" class="nav-link"><span>◷</span> Service-Life Analysis</a>
+            <a href="/economics" class="nav-link"><span>▥</span> Economic Analysis</a>
+            <a href="/reports" class="nav-link"><span>▧</span> Reports & Results</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="system-status">
+                <span class="status-dot"></span>
+                Research System
+            </div>
+            <p>Atmospheric Corrosion<br>Prediction Project</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <span class="breadcrumb">Research / Corrosion Prediction</span>
+                <h3>Corrosion Rate Assessment</h3>
+            </div>
+            <div class="topbar-right">
+                <div class="date-box">ISO 9223 FRAMEWORK</div>
+                <div class="profile-circle">ME</div>
+            </div>
+        </header>
+
+        <section class="page-banner">
+            <span class="welcome-tag">MODULE 02 / CORROSION MODELLING</span>
+            <h1>Atmospheric Corrosion Prediction</h1>
+            <p>
+                Estimation of carbon steel atmospheric corrosion rates under
+                different environmental and pollution scenarios for Tema and
+                Kumasi using the ISO 9223 dose-response approach.
+            </p>
+        </section>
+
+        <section class="data-cards">
+            <div class="data-card">
+                <span>Total Prediction Records</span>
+                <h2>{{ row_count }}</h2>
+            </div>
+
+            <div class="data-card">
+                <span>Study Locations</span>
+                <h2>{{ location_count }}</h2>
+            </div>
+
+            <div class="data-card">
+                <span>Pollution Scenarios</span>
+                <h2>{{ scenario_count }}</h2>
+            </div>
+        </section>
+
+        <section class="table-container">
+            <h2>Corrosion Rate Prediction Results</h2>
+            <p>
+                Estimated first-year corrosion rates and atmospheric
+                corrosivity categories for the study locations.
+            </p>
+
+            {% if records_html %}
+                {{ records_html|safe }}
+            {% else %}
+                <p>No corrosion prediction records could be loaded.</p>
+            {% endif %}
+        </section>
+
+        <div class="note">
+            <strong>Scientific interpretation:</strong>
+            These are model-estimated first-year corrosion rates based on
+            the ISO 9223 framework. The pollution deposition values used
+            in the scenarios are illustrative assumptions, not measured
+            site-specific deposition data. The results should therefore
+            be interpreted as preliminary scenario-based predictions.
+        </div>
+
+        <a href="/" class="back-link">← Return to Main Dashboard</a>
+
+        <footer class="footer">
+            <div>
+                <strong>ATMOSPHERIC CORROSION RESEARCH SYSTEM</strong>
+                <p>Corrosion Prediction Module</p>
+            </div>
+            <span>ACADEMIC RESEARCH PROTOTYPE</span>
+        </footer>
+
+    </main>
+</div>
+</body>
+</html>

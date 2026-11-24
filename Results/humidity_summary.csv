@@ -1,0 +1,5 @@
+,Temperature_C,Temperature_C,Temperature_C,Dewpoint_C,Dewpoint_C,Dewpoint_C,Relative_Humidity_Percent,Relative_Humidity_Percent,Relative_Humidity_Percent
+,mean,min,max,mean,min,max,mean,min,max
+Location,,,,,,,,,
+Kumasi,26.74,18.11,38.78,22.12,-5.61,26.04,78.16,7.09,100.0
+Tema,27.73,20.66,35.53,23.83,1.56,27.51,80.25,15.24,98.0

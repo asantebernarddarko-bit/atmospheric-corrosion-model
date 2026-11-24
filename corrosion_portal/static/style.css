@@ -1,0 +1,533 @@
+/* ==========================================
+   ATMOSPHERIC CORROSION RESEARCH PORTAL
+   Main Stylesheet
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f3f6fa;
+    color: #263445;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================
+   MAIN DASHBOARD LAYOUT
+========================================== */
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar {
+    width: 260px;
+    min-width: 260px;
+    background: #10243e;
+    color: white;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.brand {
+    text-align: center;
+    padding: 10px 5px 35px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    margin-bottom: 30px;
+}
+
+.brand h2 {
+    width: 65px;
+    height: 65px;
+    background: #15966b;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 27px;
+    color: white;
+}
+
+.brand p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #d9e5f2;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 13px 15px;
+    border-radius: 9px;
+    color: #d1dce9;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255,255,255,0.10);
+    color: white;
+}
+
+.sidebar nav a.active {
+    background: #15966b;
+    color: white;
+    font-weight: 700;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 30px;
+    text-align: center;
+    color: #9aadc2;
+    font-size: 11px;
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px 38px;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   TOP NAVIGATION
+========================================== */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.topbar h2 {
+    color: #10243e;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.topbar p {
+    color: #8491a1;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.status-badge {
+    background: #e1f5ec;
+    color: #12845c;
+    padding: 9px 15px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero {
+    background: linear-gradient(120deg, #102d4b, #176c62);
+    color: white;
+    padding: 38px;
+    border-radius: 16px;
+    margin-bottom: 35px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(16,36,62,0.12);
+}
+
+.hero h1 {
+    font-size: 29px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #dcece9;
+    font-size: 14px;
+    max-width: 750px;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   SECTION HEADINGS
+========================================== */
+
+.section-heading {
+    margin: 30px 0 18px;
+}
+
+.section-heading h2 {
+    color: #10243e;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.section-heading p {
+    color: #8491a1;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ==========================================
+   STATISTICS CARDS
+========================================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 23px;
+    border-radius: 13px;
+    border: 1px solid #e9eef4;
+    border-left: 4px solid #15966b;
+    box-shadow: 0 4px 15px rgba(20,45,70,0.04);
+    transition: 0.25s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(20,45,70,0.08);
+}
+
+.stat-card h3 {
+    font-size: 12px;
+    color: #7b8797;
+    font-weight: 600;
+}
+
+.stat-card h2 {
+    color: #10243e;
+    font-size: 27px;
+    margin: 10px 0 4px;
+    font-weight: 800;
+}
+
+.stat-card p {
+    color: #9aa5b2;
+    font-size: 11px;
+}
+
+/* ==========================================
+   CONTENT CARDS
+========================================== */
+
+.content-card {
+    background: white;
+    padding: 27px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    border: 1px solid #e8edf3;
+    box-shadow: 0 4px 15px rgba(20,45,70,0.04);
+}
+
+.content-card h2 {
+    color: #10243e;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.content-card h3 {
+    color: #176c62;
+    font-size: 15px;
+    margin: 18px 0 10px;
+}
+
+.content-card p {
+    color: #697789;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+/* ==========================================
+   DATA TABLES
+========================================== */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 9px;
+    border: 1px solid #e6ebf1;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.data-table thead {
+    background: #102d4b;
+    color: white;
+}
+
+.data-table th {
+    padding: 14px 15px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #edf0f4;
+    color: #536174;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background: #f6f9fc;
+}
+
+.data-table tbody tr:hover {
+    background: #eaf5f0;
+}
+
+/* ==========================================
+   ECONOMIC AND RESEARCH GRAPHS
+========================================== */
+
+.result-graph {
+    display: block;
+    width: 100%;
+    max-width: 1050px;
+    height: auto;
+    margin: 25px auto 10px;
+    padding: 12px;
+    background: white;
+    border: 1px solid #e5eaf0;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(20,45,70,0.07);
+}
+
+/* ==========================================
+   MODULE CARDS
+========================================== */
+
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.module-card {
+    background: white;
+    padding: 23px;
+    border-radius: 13px;
+    border: 1px solid #e8edf3;
+    transition: 0.25s;
+}
+
+.module-card:hover {
+    transform: translateY(-4px);
+    border-color: #15966b;
+    box-shadow: 0 7px 18px rgba(20,45,70,0.07);
+}
+
+.module-card h3 {
+    color: #10243e;
+    font-size: 15px;
+    margin-bottom: 9px;
+}
+
+.module-card p {
+    color: #7c8998;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.module-card a {
+    display: inline-block;
+    margin-top: 14px;
+    color: #15966b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   WORKFLOW
+========================================== */
+
+.workflow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.workflow-step {
+    flex: 1;
+    min-width: 130px;
+    background: #edf7f3;
+    border: 1px solid #d5eee3;
+    border-radius: 10px;
+    padding: 16px 12px;
+    text-align: center;
+    color: #176c62;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   BUTTONS AND LINKS
+========================================== */
+
+.button {
+    display: inline-block;
+    background: #15966b;
+    color: white;
+    padding: 11px 19px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.button:hover {
+    background: #107653;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+    text-align: center;
+    color: #9aa5b2;
+    font-size: 11px;
+    padding: 25px 10px;
+    margin-top: 30px;
+    border-top: 1px solid #e5eaf0;
+    line-height: 2;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .module-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sidebar-footer {
+        margin-top: 20px;
+    }
+
+    .main-content {
+        padding: 22px 15px;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 23px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .module-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        align-items: flex-start;
+    }
+
+    .workflow {
+        flex-direction: column;
+    }
+
+    .workflow-step {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar nav {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar h2 {
+        font-size: 19px;
+    }
+
+    .status-badge {
+        font-size: 9px;
+    }
+
+}

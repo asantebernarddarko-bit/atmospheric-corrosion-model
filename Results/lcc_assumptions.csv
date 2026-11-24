@@ -1,0 +1,16 @@
+Parameter,Value,Unit
+Steel density,7850.0,kg/m3
+Reference surface area,100.0,m2
+Analysis period,50.0,years
+Discount rate,5,%
+Steel purchase cost,1.13,USD/kg
+Fabrication and installation cost,1.75,USD/kg
+Initial protective coating cost,48.31,USD/m2
+Inspection cost,250,USD/inspection
+Inspection interval,5,years
+Annual maintenance cost,1.00,USD/m2/year
+Recoating cost,165.10,USD/m2
+Recoating interval,15,years
+Repair cost,,USD/m2
+Replacement cost,,USD/kg
+Total exposed/coated area,200,m2

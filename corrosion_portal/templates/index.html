@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmospheric Corrosion Research Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-emblem">AC</div>
+            <div>
+                <h2>ACR SYSTEM</h2>
+                <span>RESEARCH PORTAL</span>
+            </div>
+        </div>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="navigation">
+
+            <a href="/" class="nav-link active">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="/environment" class="nav-link">
+                <span>◉</span> Environmental Data
+            </a>
+
+            <a href="/corrosion" class="nav-link">
+                <span>⌁</span> Corrosion Prediction
+            </a>
+
+            <a href="/thickness" class="nav-link">
+                <span>▤</span> Steel Thickness
+            </a>
+
+            <a href="/service-life" class="nav-link">
+                <span>◷</span> Service-Life Analysis
+            </a>
+
+            <a href="/economics" class="nav-link">
+                <span>▥</span> Economic Analysis
+            </a>
+
+            <a href="/graphs" class="nav-link">
+                <span>▧</span> Graphs & Visualisation
+            </a>
+
+            <a href="/reports" class="nav-link">
+                <span>▤</span> Reports & Results
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="system-status">
+                <span class="status-dot"></span>
+                Research System
+                <small>LOCAL APPLICATION</small>
+            </div>
+
+            <p>Atmospheric Corrosion<br>Prediction Project</p>
+        </div>
+    </aside>
+
+
+    <main class="main-content" id="dashboard">
+
+        <header class="topbar">
+            <div>
+                <span class="breadcrumb">Research / Dashboard</span>
+                <h3>Research Dashboard</h3>
+            </div>
+
+            <div class="topbar-right">
+                <div class="date-box">ENGINEERING RESEARCH</div>
+                <div class="profile-circle">ME</div>
+            </div>
+        </header>
+
+
+        <section class="welcome-section">
+            <div class="welcome-text">
+
+                <span class="welcome-tag">METALLURGICAL ENGINEERING</span>
+
+                <h1>Atmospheric Corrosion<br>Prediction & Analysis</h1>
+
+                <p>
+                    An integrated research platform for predicting atmospheric
+                    corrosion rates, assessing steel service life and estimating
+                    life-cycle costs under different environmental conditions.
+                </p>
+
+                <a href="/corrosion" class="primary-button">
+                    Explore Research Results →
+                </a>
+
+            </div>
+
+            <div class="welcome-graphic">
+                <div class="graphic-circle">
+                    <div class="graphic-inner">Fe</div>
+                </div>
+
+                <span>CARBON STEEL</span>
+                <small>CORROSION MODELLING SYSTEM</small>
+            </div>
+        </section>
+
+
+        <section class="section-heading">
+            <div>
+                <span class="section-kicker">PROJECT OVERVIEW</span>
+                <h2>Model at a Glance</h2>
+            </div>
+
+            <span class="live-label">
+                <span class="status-dot"></span> DATA CONNECTED
+            </span>
+        </section>
+
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">⌖</div>
+                <span>Study Locations</span>
+                <h2>{{ summary.locations }}</h2>
+                <small>Tema and Kumasi</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">⌁</div>
+                <span>Corrosion Records</span>
+                <h2>{{ summary.corrosion_records }}</h2>
+                <small>Prediction records</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">◷</div>
+                <span>Service-Life Records</span>
+                <h2>{{ summary.service_records }}</h2>
+                <small>Steel thickness assessment</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">▥</div>
+                <span>Economic Records</span>
+                <h2>{{ summary.economic_records }}</h2>
+                <small>Life-cycle cost analysis</small>
+            </div>
+
+        </section>
+
+
+        <section class="section-heading module-heading">
+            <div>
+                <span class="section-kicker">ANALYTICAL FRAMEWORK</span>
+                <h2>Research Modules</h2>
+            </div>
+        </section>
+
+
+        <section class="modules-grid">
+
+            <div class="module-card">
+                <div class="module-icon blue">01</div>
+                <h3>Environmental Assessment</h3>
+                <p>Analysis of temperature, relative humidity and atmospheric conditions.</p>
+                <span>ENVIRONMENTAL INPUTS</span>
+                <a href="/environment">Open Module →</a>
+            </div>
+
+            <div class="module-card">
+                <div class="module-icon green">02</div>
+                <h3>Corrosion Prediction</h3>
+                <p>Estimation of carbon steel corrosion rates using the ISO 9223 framework.</p>
+                <span>CORROSION MODELLING</span>
+                <a href="/corrosion">Open Module →</a>
+            </div>
+
+            <div class="module-card">
+                <div class="module-icon orange">03</div>
+                <h3>Steel Thickness Assessment</h3>
+                <p>Evaluation of corrosion-related thickness loss and remaining steel thickness.</p>
+                <span>MATERIAL PERFORMANCE</span>
+                <a href="/thickness">Open Module →</a>
+            </div>
+
+            <div class="module-card">
+                <div class="module-icon purple">04</div>
+                <h3>Service-Life Analysis</h3>
+                <p>Assessment of predicted steel performance over the selected analysis period.</p>
+                <span>LONG-TERM ASSESSMENT</span>
+                <a href="/service-life">Open Module →</a>
+            </div>
+
+            <div class="module-card">
+                <div class="module-icon green">05</div>
+                <h3>Life-Cycle Cost Analysis</h3>
+                <p>Estimation of installation, maintenance, recoating and replacement costs.</p>
+                <span>ECONOMIC MODELLING</span>
+                <a href="/economics">Open Module →</a>
+            </div>
+
+            <div class="module-card">
+                <div class="module-icon blue">06</div>
+                <h3>Graphs & Visualisation</h3>
+                <p>Visual comparison of environmental scenarios, locations, steel thickness and life-cycle costs.</p>
+                <span>GRAPHICAL ANALYSIS</span>
+                <a href="/graphs">Open Graphs →</a>
+            </div>
+
+            <div class="module-card">
+                <div class="module-icon purple">07</div>
+                <h3>Research Results</h3>
+                <p>Access model datasets and downloadable research outputs.</p>
+                <span>RESULTS & REPORTING</span>
+                <a href="/reports">Open Module →</a>
+            </div>
+
+        </section>
+
+
+        <section class="workflow-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">MODEL STRUCTURE</span>
+                    <h2>Integrated Prediction Workflow</h2>
+                </div>
+            </div>
+
+            <div class="workflow">
+
+                <div class="workflow-step">
+                    <span>01</span>
+                    <strong>Environmental<br>Conditions</strong>
+                </div>
+
+                <div class="workflow-arrow">→</div>
+
+                <div class="workflow-step">
+                    <span>02</span>
+                    <strong>Corrosion Rate<br>Prediction</strong>
+                </div>
+
+                <div class="workflow-arrow">→</div>
+
+                <div class="workflow-step">
+                    <span>03</span>
+                    <strong>Thickness Loss<br>Assessment</strong>
+                </div>
+
+                <div class="workflow-arrow">→</div>
+
+                <div class="workflow-step">
+                    <span>04</span>
+                    <strong>Service-Life<br>Estimation</strong>
+                </div>
+
+                <div class="workflow-arrow">→</div>
+
+                <div class="workflow-step">
+                    <span>05</span>
+                    <strong>Life-Cycle Cost<br>Prediction</strong>
+                </div>
+
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div>
+                <strong>ATMOSPHERIC CORROSION RESEARCH SYSTEM</strong>
+                <p>Predictive Modelling of Carbon Steel Structures</p>
+            </div>
+
+            <span>ACADEMIC RESEARCH PROTOTYPE</span>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>
