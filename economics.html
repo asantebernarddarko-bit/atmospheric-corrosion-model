@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Economic Analysis | Corrosion Research Portal</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        header {
+            background: linear-gradient(135deg, #064e3b, #059669);
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 10px;
+        }
+
+        nav {
+            background: #022c22;
+            padding: 16px;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin: 6px 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #6ee7b7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 15px;
+        }
+
+        .intro, .results {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+        }
+
+        h2 {
+            color: #047857;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 23px;
+            border-radius: 12px;
+            border-left: 5px solid #059669;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+        }
+
+        .card h3 {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .card p {
+            color: #065f46;
+            font-size: 27px;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            min-width: 950px;
+        }
+
+        .data-table th {
+            background: #047857;
+            color: white;
+            padding: 13px;
+            text-align: left;
+        }
+
+        .data-table td {
+            padding: 11px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: #ecfdf5;
+        }
+
+        .note {
+            background: #ecfdf5;
+            border-left: 5px solid #059669;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #022c22;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 40px;
+        }
+
+        @media(max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Economic Analysis</h1>
+    <p>Life Cycle Cost Assessment of Carbon Steel Structures</p>
+</header>
+
+<nav>
+    <a href="/">Dashboard</a>
+    <a href="/environment">Environmental Data</a>
+    <a href="/corrosion">Corrosion Prediction</a>
+    <a href="/thickness">Steel Thickness</a>
+    <a href="/service-life">Service Life</a>
+    <a href="/economics" class="active">Economic Analysis</a>
+    <a href="/graphs">Graphs & Visualisation</a>
+    <a href="/reports">Reports</a>
+</nav>
+
+<div class="container">
+
+    <section class="intro">
+        <h2>Economic Assessment Overview</h2>
+
+        <p>
+            This section evaluates the life cycle cost of carbon steel
+            structures under different atmospheric corrosivity conditions.
+            The analysis considers initial installation costs, replacement
+            costs, nominal life cycle costs and discounted life cycle costs.
+        </p>
+
+        <p>
+            The assessment covers a 50-year analysis period using a
+            5% discount rate.
+        </p>
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>Analysis Period</h3>
+            <p>50 Years</p>
+        </div>
+
+        <div class="card">
+            <h3>Economic Records</h3>
+            <p>{{ record_count }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Discount Rate</h3>
+            <p>5%</p>
+        </div>
+
+        <div class="card">
+            <h3>Study Locations</h3>
+            <p>2</p>
+        </div>
+
+    </section>
+
+    <section class="results">
+
+        <h2>Life Cycle Cost Results</h2>
+
+        <p>
+            The table presents the estimated economic outcomes for
+            different locations, environmental scenarios, steel thicknesses
+            and replacement thresholds.
+        </p>
+
+        <div class="table-container">
+            {{ records_html | safe }}
+        </div>
+
+        <div class="note">
+            <strong>Interpretation:</strong>
+            A replacement year indicates when the steel is predicted to
+            reach the selected replacement threshold. Where no replacement
+            is predicted within the 50-year analysis period, the result
+            should be interpreted accordingly.
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>Atmospheric Corrosion Prediction and Life Cycle Cost Model</p>
+    <p>Metallurgical Engineering Research Project</p>
+</footer>
+
+</body>
+</html>
